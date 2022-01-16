@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxin</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <script>
+        $(function(){
+            $("#arrival").datepicker(
+
+            );
+        });
+        $(function(){
+            $("#departure").datepicker();
+        });
+        </script>
+    <script>
+        /* Локализация datepicker */
+        $.datepicker.regional['ru'] = {
+            closeText: 'Закрыть',
+            prevText: 'Предыдущий',
+            nextText: 'Следующий',
+            currentText: 'Сегодня',
+            monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+            monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+            dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+            dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+            dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+            weekHeader: 'Не',
+            dateFormat: 'dd.mm.yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+        };
+        $.datepicker.setDefaults($.datepicker.regional['ru']);
+        </script>
+
+</head>
+<body> 
+    <div class="container">
+        <header>
+            <div class="header__left_side">
+                <div class="logo__inner">
+                    <div class="logo__inner__vector_img"></div>
+                    <div class="logo__inner__title"></div>
+                </div>
+            </div>
+            <div class="header__right_side">
+                <nav class="header__navigation">
+                    <div class="header__navigation__item">О нас</div>
+                    <div class="header__navigation__item"> <p>Услуги</p> 
+                    <i class="material-icons"  >expand_more</i></div>
+                    <div class="header__navigation__item">Вакансии</div>
+                    <div class="header__navigation__item">Новости</div>
+                    <div class="header__navigation__item">Соглашения
+                        <i class="material-icons" >expand_more</i>
+                    </div>
+                </nav>
+                    <button type="button" class="button button__log_in">войти</button>
+                    <button type="button" class="button button__registration">зарегистрироваться</button>
+            </div>
+        </header>
+    </div>
+    <div class="large__container">
+        <div class="main">
+            <div class="container">
+                <div class="main__form">
+                    <h2 class="main__form__title">Найдём номера под ваши пожелания</h2>
+                    <form action="#">
+                        <div class="main__form__dates">
+                            <div class="main__form__dates_item main__form__dates_arrival">
+                                <label for="arrival">Прибытие</label>
+                                <input type="text" id="arrival" name="
+                                arrival" placeholder="ДД.ММ.ГГГГ">
+                            </div>
+                            <div class="main__form__dates_item main__form__dates_departure">                    
+                                <label for="departure">Выезд</label>
+                                <input type="text" id="departure" name="
+                                departure" placeholder="ДД.ММ.ГГГГ">
+                            </div>
+                        </div>
+                        <div class=".main__form__dates_item">
+                            <h3 class="guests">Гости</h3>
+                            <div class="dropdown">
+                                <button onclick="myFunction()" class="main__form__guests__dropbtn">Сколько гостей<i class="material-icons" >expand_more</i></button>
+                                    <div id="myDropdown" class="dropdown-content">
+
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" value="Подобрать номер" name="form__submit" class="submit__form">
+                    </form>
+                </div>
+                <div class="main__quote">
+                    <p class="main__quote__text">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script/script.js"></script>
+</body>
+</html>
